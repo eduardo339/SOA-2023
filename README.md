@@ -22,6 +22,7 @@ Este módulo se encarga del envio de los tickets a las personas correspondientes
 5.- Sistema de chequeo de tickets
 Esté módulo permite la finalización de un ticket, permitiendo checar si un ticket se cumplio o no.
 
-
+No olviden actualizar el proyecto
+![image](https://github.com/eduardo339/SOA-2023/assets/63263335/39f24a7f-5d4a-4055-afa6-d128bb6ca3f5)
 
 
