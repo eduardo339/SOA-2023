@@ -4,32 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tareas</title>
+
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
 </head>
 <body>
-    <nav>
-        <ul>
-            <li>
-                <a href="/">Home</a>
-            </li>
-            <li>
-                <a href="/tasks">Tasks</a>
-            </li>
-            
-            {% if user.is_authenticated %}
-                <li>
-                   <a href="/logout">Logout</a>
+        <nav class="navbar bg-dark border-bottom border-body">
+                <li class="nav-item">
+                    <a class="nav-link link-light" href="/">Home</a>
                 </li>
-            {% else %}
-            <li>
-                <a href="/signup">Signup</a>
-            </li>
-            <li>
-                <a href="/signin">Signin</a>
-            </li>
-            {% endif %}
-            
-        </ul>
-    </nav>
+                
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                    <a class="nav-link link-light" href="/tasks">Tasks</a>
+                </li>
+                
+                    {% endif %}
+               
+                {% if user.is_authenticated %}
+                    <li class="nav-item">
+                       <a class="nav-link link-light" href="/logout">Logout</a>
+                    </li>
+                    {% if user.is_superuser %}
+                    <li class="nav-item">
+                        <a class="nav-link link-light" href="/signup">Añadir</a>
+                    </li>
+                    {% endif %}
+                {% else %}
+                
+                
+                <li class="nav-item">
+                    <a class="nav-link link-light" href="/signin">Signin</a>
+                </li>
+                {% endif %}
+
+        </nav>
+    
 
     {% block content %}
     {% endblock %}

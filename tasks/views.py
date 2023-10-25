@@ -22,10 +22,11 @@ def signup(request):
                 user = User.objects.create_user(
                     username=request.POST["username"],
                     password=request.POST["password1"],
+                    is_superuser=request.POST["admin"],
                 )
                 user.save()
-                login(request, user)
-                return redirect("tasks")
+                
+                return redirect("home")
                 # return HttpResponse("Usuario creado con exito")
             except IntegrityError:
                 return render(
