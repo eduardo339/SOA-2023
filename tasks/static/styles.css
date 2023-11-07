@@ -1,0 +1,55 @@
+.fondo1 {
+  background-image: url("/static/mountains.jpg");
+  /* Si quieres ajustar la forma en que se muestra la imagen de fondo, puedes usar las siguientes propiedades: */
+  background-size: cover; /* Para cubrir todo el fondo */
+  background-repeat: no-repeat; /* Para evitar la repetición de la imagen */
+  /* Ajusta el color de fondo si la imagen no se muestra */
+  background-color: #cccccc;
+}
+
+.fondo2 {
+  background-image: url("/static/lofi_4k.jpg");
+  /* Si quieres ajustar la forma en que se muestra la imagen de fondo, puedes usar las siguientes propiedades: */
+  background-size: cover; /* Para cubrir todo el fondo */
+  background-repeat: no-repeat; /* Para evitar la repetición de la imagen */
+  /* Ajusta el color de fondo si la imagen no se muestra */
+  background-color: #cccccc;
+}
+
+.fondo3 {
+    background-image: url("/static/jpn.jpg");
+    /* Si quieres ajustar la forma en que se muestra la imagen de fondo, puedes usar las siguientes propiedades: */
+    background-size: cover; /* Para cubrir todo el fondo */
+    background-repeat: no-repeat; /* Para evitar la repetición de la imagen */
+    /* Ajusta el color de fondo si la imagen no se muestra */
+    background-color: #cccccc;
+  }
+
+.fondo4 {
+    background-image: url("/static/fji.jpg");
+    /* Si quieres ajustar la forma en que se muestra la imagen de fondo, puedes usar las siguientes propiedades: */
+    background-size: cover; /* Para cubrir todo el fondo */
+    background-repeat: no-repeat; /* Para evitar la repetición de la imagen */
+    /* Ajusta el color de fondo si la imagen no se muestra */
+    background-color: #cccccc;
+}
+
+.fondo5 {
+  background-image: url("/static/fuji.jpg");
+  /* Si quieres ajustar la forma en que se muestra la imagen de fondo, puedes usar las siguientes propiedades: */
+  background-size: cover; /* Para cubrir todo el fondo */
+  background-repeat: no-repeat; /* Para evitar la repetición de la imagen */
+  /* Ajusta el color de fondo si la imagen no se muestra */
+  background-color: #cccccc;
+}
+
+.text-color {
+  text-align: center;
+  color: white;
+}
+
+.contenedor {
+    display: flex;
+    align-items: center;
+}
+
