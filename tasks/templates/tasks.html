@@ -2,4 +2,19 @@
 
 {% block content %}
 <h1>tareas</h1>
+
+<form action="/newTask/" method="POST">
+    {% csrf_token %}
+    <button>
+        Nueva Tarea
+    </button>
+</form>
+
+<form action="/editTask/" method="POST">
+    {% csrf_token %}
+    <button>
+        Editar Tarea
+    </button>
+</form>
+
 {% endblock %}

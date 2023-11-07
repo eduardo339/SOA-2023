@@ -70,4 +70,10 @@ def signin(request):
         else: 
             login(request, user)
             return redirect('tasks')
-    
+        
+
+def newTask(request):
+    return render(request, "newTask.html")   
+
+def editTask(request):
+    return render(request, "editTask.html") 
