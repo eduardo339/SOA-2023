@@ -69,7 +69,7 @@ def signin(request):
                 })
         else: 
             login(request, user)
-            return redirect('tasks')
+            return redirect('home')
         
 
 def newTask(request):
