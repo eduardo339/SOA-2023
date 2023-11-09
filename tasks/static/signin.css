@@ -1,0 +1,117 @@
+.fondo {
+    background-image: url("/static/lofi_4k.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #cccccc;
+  }
+
+  
+/*Borrar aqui*/
+
+.container-form{
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1);
+    height: 400px;
+    width: 750px;
+    transition: all 1s erase;
+    margin: 10px;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}
+
+.information{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: #474364;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    
+}
+
+.info-childs{
+    width: 100%;
+    padding: 0 30px;
+}
+
+.info-childs h2{
+    font-size: 2rem;
+    color: #ffffff;
+    
+}
+
+
+.form-information {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    text-align: center;
+    background-color: #f8f8f8;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.form-information-child{
+    padding: 0 30%;
+}
+
+.form-information-child h2{
+    color: #333;
+    font-size: 2rem;
+}
+
+.form-information-child p{
+    color: #555;
+}
+
+.icons{
+    margin: 15px 0;
+}
+
+.form{
+    margin: 0px 0 0 0;
+}
+
+
+.form label{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    padding: 0 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form label input{
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    color: #333;
+}
+
+.form label i {
+    color: #a7a7a7;
+}
+
+.form input[type="submit"]{
+    background-color: #474364 ;
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form input[type="submit"]:hover{
+    background-color: #b77995  ;
+}
