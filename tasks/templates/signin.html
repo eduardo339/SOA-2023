@@ -1,19 +1,53 @@
 <head>
-    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+  <link rel="stylesheet" type="text/css" href="/static/signin.css">
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<body class="fondo2 text-color">
-    {% extends 'base.html' %}
-    
-    {% block content %}
-    <h1>Signin</h1>
-    
-    {{error}}
-    <form action="/signin/" method="POST">
-        {% csrf_token %}
-        {{form.as_p}}
-        <button>
-            Signin
-        </button>
-    </form>
-    {% endblock %}
+
+<body class="fondo text-color">
+  {% extends 'base.html' %}
+  {% block content %}
+
+  <div class="container-form">
+    <div class="information">
+      <div class="info-childs">
+        <h2>Bienvenido</h2>
+      </div>
+    </div>
+    <div class="form-information">
+      <div class="form-information-childs">
+        <h2>Iniciar sesión</h2>
+        <p>Usa tu cuenta asignada</p>
+
+        <form action="/signin/" method="POST" class="form">
+          {% csrf_token %}
+          <div>User</div>
+          <label>
+              <i class='bx bxs-envelope'></i>
+              {{ form.username }}
+              {{ form.username.error}}
+          </label>
+          <div>password</div>
+          <label>
+              <i class='bx bxs-lock-alt'></i>
+              {{ form.password }}
+              {{ form.password.error}}
+          </label>
+          <input type="submit" value="Iniciar Sesión" href="Signin">
+      </form>
+      
+      {% if error %}
+          <p class="error" id="error-message">{{ error }}</p>
+          <script>
+              // JavaScript para ocultar el mensaje si se ha enviado el formulario
+              window.onload = function() {
+                  if (window.history.replaceState) {
+                      window.history.replaceState(null, null, window.location.href);
+                  }
+              }
+          </script>
+      {% endif %}
+        {% endblock %}
+      </div>
+    </div>
+  </div>
 </body>
