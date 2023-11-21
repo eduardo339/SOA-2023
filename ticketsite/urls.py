@@ -21,9 +21,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('signup/', views.signup, name='signup'),
-    path('tasks/', views.tasks, name='tasks'),
+    path('tasks/', views.tasks.as_view(), name='tasks'),
     path('logout/', views.signout, name='logout'),
     path('signin/', views.signin, name='signin'),
-    path('newTask/', views.newTask, name= 'newTask'),
-    path('editTask/', views.editTask, name= 'editTask'),
+    path('newTask/', views.crearTarea.as_view(), name= 'newTask'),
+    path('editTask/<int:pk>', views.editarTarea.as_view(), name= 'editTask'),
+    path('delete/<int:pk>', views.borrarTarea.as_view(), name='delete'),
 ]

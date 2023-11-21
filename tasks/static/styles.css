@@ -1,3 +1,17 @@
+.contenido{
+  overflow: scroll;
+    color: black;
+    background-color: rgb(223, 240, 255);
+    text-align: center;
+    width: 175px;
+    height: 200px;
+    border: 1px solid black;
+}
+.elemento-lista{
+  display: inline-block;
+  margin-right: 10px;
+  padding-bottom: 10px;
+}
 .fondo1 {
   background-image: url("/static/mountains.jpg");
   /* Si quieres ajustar la forma en que se muestra la imagen de fondo, puedes usar las siguientes propiedades: */

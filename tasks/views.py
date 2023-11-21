@@ -4,7 +4,10 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
 from django.contrib.auth import login, logout, authenticate
 from django.db import IntegrityError
-
+from tasks.models import Tarea
+from django.views.generic import ListView, DetailView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.urls import reverse_lazy
 
 # Create your views here.
 def home(request):
@@ -44,9 +47,25 @@ def signup(request):
         print("Obteniendo datos")
 
 
-def tasks(request):
-    return render(request, "tasks.html")
+class tasks(ListView):
+    
+    model=Tarea
 
+class crearTarea(CreateView):
+    model=Tarea
+    fields=['tid', 'tname', 'tdesc', 'euser']
+    success_url = reverse_lazy('tasks')
+
+class editarTarea(UpdateView):
+    model=Tarea
+    fields=['tid', 'tname', 'tdesc', 'euser']
+    success_url = reverse_lazy('tasks')
+
+class borrarTarea(DeleteView):
+    model=Tarea
+    success_url = reverse_lazy('tasks')
+
+    
 
 def signout(request):
     logout(request)

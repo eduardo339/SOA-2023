@@ -1,0 +1,19 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+
+<body class="fondo4 text-color">
+    {% extends 'base.html' %}
+
+    {% block content %}
+    <center>
+    
+<h1>Eliminar Tarea</h1>
+<form method="post">{% csrf_token %}
+    Are you sure you want to delete "{{ tarea.tname }}" ?
+    <input type="submit" value="Submit" />
+</form>
+
+    <center>
+    {% endblock %}
+</body>

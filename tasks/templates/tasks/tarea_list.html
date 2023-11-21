@@ -1,0 +1,46 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+
+<body  class="fondo3 text-color">
+    {% extends '../base.html' %}
+
+    {% block content %}
+    <h1>Tareas</h1>
+    {% if user.is_superuser %}
+
+    <form action="/newTask/" method="POST">
+        {% csrf_token %}
+        <button>
+            Nueva Tarea
+        </button>
+    </form>
+
+    {% endif %}
+    <div>
+        <ul>
+    {% for tarea in object_list %}
+        {% if tarea.euser == user.username or user.is_superuser %}
+        <li class="elemento-lista">
+            <div class="contenido">
+            <h5>{{tarea.tname}}</h5>
+            <br>{{tarea.tdesc}}<br>
+            {% if user.is_superuser %}
+            <br>{{tarea.euser}}<br>
+            <a href="{% url "editTask" tarea.id %}">Editar</a>
+            <a href="{% url "delete" tarea.id %}">Eliminar</a>
+            {% else %}
+            <a href="{% url "delete" tarea.id %}">Completar</a>
+            {% endif %}
+
+            </div>
+        </li>
+        {% endif %}
+        
+        
+    {% endfor %}
+        </ul>
+    </div>
+    {% endblock %}
+</body>
+

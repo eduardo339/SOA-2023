@@ -7,7 +7,7 @@
 
     {% block content %}
     <h1>tareas</h1>
-
+    {% if user.is_superuser %}
     <form action="/newTask/" method="POST">
         {% csrf_token %}
         <button>
@@ -21,6 +21,13 @@
             Editar Tarea
         </button>
     </form>
+    {% endif %}
+    
+    {% for tarea in object_list %}
+        {% if tarea.euser == user.username %}
+        <h1>{{tarea.tname}}</h1>
+        {% endif %}
+    {% endfor %}
 
     {% endblock %}
 </body>
