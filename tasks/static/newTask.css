@@ -1,0 +1,26 @@
+.fondo4 {
+    background-image: url("/static/fji.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #cccccc;
+}
+
+.text-color {
+    text-align: center;
+    color: white;
+}
+  
+.estilo-button {
+    position: relative;
+    display: inline-block;
+    padding: 5px 15px;
+    color: #0b2a2c;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 10px;
+    border-radius: 15px;
+    letter-spacing: 5px;
+  }

@@ -1,0 +1,43 @@
+.home-container {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 500px;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.87);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    border-radius: 40px;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  .home-container h1 {
+    margin: 0 0 0p;
+    padding: 0;
+    color: #f8f2f2;
+  }
+
+  .fondo1 {
+    background-image: url("/static/mountains.jpg");
+    /* Si quieres ajustar la forma en que se muestra la imagen de fondo, puedes usar las siguientes propiedades: */
+    background-size: cover; /* Para cubrir todo el fondo */
+    background-repeat: no-repeat; /* Para evitar la repetición de la imagen */
+    /* Ajusta el color de fondo si la imagen no se muestra */
+    background-color: #cccccc;
+  }
+.logo{
+    width: 60%;
+    height: 60%;
+}
+
+
+
+
+
+
+
+
+
+

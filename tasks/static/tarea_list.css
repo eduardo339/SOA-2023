@@ -1,0 +1,89 @@
+.fondo {
+    background-image: url("/static/estrellado.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #cccccc;
+  }
+
+  .list-container {
+    position: absolute;
+    top: 23%;
+    left: 50%;
+    width: 500px;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.87);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    border-radius: 10px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.list-container h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+
+
+.tareas-container {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  width: max-content;
+  padding: 20px;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  border-radius: 10px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.tareas-container form button {
+  position: relative;
+  display: inline-block;
+  padding: 5px 15px;
+  color: #0b2a2c;
+  font-size: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 10px;
+  border-radius: 15px;
+  letter-spacing: 5px;
+
+}
+  
+  .contenido{
+    overflow: scroll;
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.699);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.363);
+    border-radius: 10px;
+    text-align: center;
+  }
+  .elemento-lista{
+    display: inline-block;
+    margin-right: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .1s;
+  }
+
+  .contenedor {
+    display: flex;
+    align-items: center;
+}
+  .text-color {
+    text-align: center;
+    color: white;
+  }

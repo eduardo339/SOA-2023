@@ -1,16 +1,18 @@
-{% extends 'base.html' %}
-
-{% block content %}
 <head>
-    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+    <link rel="stylesheet" type="text/css" href="/static/home.css">
+    
 </head>
-<body class ="fondo1 text-color">
-    {% if user.is_authenticated %}
-    <br><br><br><br><br><br><br>
-    <h1>Hola {{user.username}}</h1>
-    {% else %}
-    <br><br><br><br><br><br><br>
-    <h1 style="text-color: white">Home</h1>
-    {% endif %}
+
+<body class="fondo1">
+    {% extends 'base.html' %}
+    {% block content %}
+    <div class="home-container">
+        {% if user.is_authenticated %}
+        <h1>Hola {{user.username}}</h1>
+        {% else %}
+        {% load static %}<img src="{% static '/came-logo.png' %}" alt="logo" class="logo">
+        <h1>Home</h1>
+        {% endif %}
+    </div>
 </body>
 {% endblock %}
